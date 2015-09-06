@@ -20,7 +20,8 @@ class Task: NSObject {
     var importance: String = ""
     var createdDate: String = ""
     var updatedDate: String = ""
-    var dates: [String : String] = ["type" : "", "duration" : "", "start" : "", "due" : ""]
+    // TODO: - Create Dates
+    //var dates: [String : String] = ["type" : "", "duration" : "", "start" : "", "due" : ""]
     var scope: String = ""
     var authorIDs: [String] = []
     var accountIDs: String = ""
@@ -29,5 +30,4 @@ class Task: NSObject {
     var priority: String = ""
     var superTaskIDs: [String] = []
     var subTaskIDs: [String] = []
-    var dependencyIDs: [String] = []
 }

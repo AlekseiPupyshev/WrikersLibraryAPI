@@ -198,4 +198,67 @@ class APIMethodsManager: NSObject {
         
         return nil
     }
+    
+    // MARK: - Taksk methods
+    
+    func getTasksInAllAccounts() -> [Task]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getTasksInAllAccounts' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getTasks(data!)
+        }
+        
+        return nil
+    }
+    
+    func getTasksInAccountBy(id: String) -> [Task]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getTasksInAccountBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getTasks(data!)
+        }
+        
+        return nil
+    }
+    
+    func getTasksInFolderBy(id: String) -> [Task]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getTasksInFolderBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getTasks(data!)
+        }
+        
+        return nil
+    }
+    
+    func getTasksBy(IDs: [String]) -> [Task]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getTasksBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getTasks(data!)
+        }
+        
+        return nil
+    }
+    
+    func createTask() -> Task? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'createTask' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.createTask(data!)
+        }
+        
+        return nil
+    }
+    
 }
