@@ -174,4 +174,28 @@ class APIMethodsManager: NSObject {
     }
     
     // MARK: - Folder methods
+    
+    func getFoldersBy(IDs: [String]) -> [Folder]? {
+        var (data, error) = httpManager.getRequest("", parameters: ",".join(IDs), token: token)
+        
+        if error != nil {
+            println("Error in 'getFoldersBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getFolders(data!)
+        }
+        
+        return nil
+    }
+    
+    func createFolder() -> Folder? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'createFolder' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.createFolder(data!)
+        }
+        
+        return nil
+    }
 }

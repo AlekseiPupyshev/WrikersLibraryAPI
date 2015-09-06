@@ -99,21 +99,52 @@ class APIManager: NSObject {
         return folders
     }
     
-    func getFoldersByIDs() {
+    func getFolders(data: NSData) -> [Folder] {
+        var json = JSON(data: data)
+        var folders: [Folder] = []
         
+        for workflowElem in 0...json["data"].count - 1 {
+            var folder = Folder()
+            
+            folder.id = json["data"][workflowElem]["id"].stringValue
+            folder.title = json["data"][workflowElem]["title"].stringValue
+            folder.createdDate = json["data"][workflowElem]["createdDate"].stringValue
+            folder.briefDescription = json["data"][workflowElem]["briefDescription"].stringValue
+            folder.folderDescription = json["data"][workflowElem]["folderDescription"].stringValue
+            folder.sharedIDs = json["data"][workflowElem]["sharedIds"].arrayObject as! [String]
+            folder.parentsIDs = json["data"][workflowElem]["parentIds"].arrayObject as! [String]
+            folder.scope = json["data"][workflowElem]["scope"].stringValue
+            folder.hasAttachments = json["data"][workflowElem]["hasAttachments"].boolValue
+            folder.permalink = json["data"][workflowElem]["permalink"].stringValue
+            folder.workflowID = json["data"][workflowElem]["workflowId"].stringValue
+            folder.childIDs = json["data"][workflowElem]["childIds"].arrayObject as! [String]
+            
+            folders.append(folder)
+        }
+        
+        return folders
     }
     
-    func createFolder() {
+    func createFolder(data: NSData) -> Folder {
+        var json = JSON(data: data)
+        var folder Folder()
         
+        folder.id = json["data"]["id"].stringValue
+        folder.title = json["data"]["title"].stringValue
+        folder.createdDate = json["data"]["createdDate"].stringValue
+        folder.briefDescription = json["data"]["briefDescription"].stringValue
+        folder.folderDescription = json["data"]["folderDescription"].stringValue
+        folder.sharedIDs = json["data"]["sharedIds"].arrayObject as! [String]
+        folder.parentsIDs = json["data"]["parentIds"].arrayObject as! [String]
+        folder.scope = json["data"]["scope"].stringValue
+        folder.hasAttachments = json["data"]["hasAttachments"].boolValue
+        folder.permalink = json["data"]["permalink"].stringValue
+        folder.workflowID = json["data"]["workflowId"].stringValue
+        folder.childIDs = json["data"]["childIds"].arrayObject as! [String]
+        
+        return folder
     }
     
-    func modifyFolder() {
-        
-    }
-    
-    class func deleteFoldersByIDs() {
-        
-    }
     
     // MARK: - Tasks
     
