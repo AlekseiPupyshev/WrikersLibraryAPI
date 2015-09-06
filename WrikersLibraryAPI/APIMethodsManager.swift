@@ -71,7 +71,7 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getContactsIn(account id: String) -> [Contact]? {
+    func getContactsIn(Account id: String) -> [Contact]? {
         var (data, error) = httpManager.getRequest("", parameters: "", token: token)
         
         if error != nil {
@@ -116,6 +116,20 @@ class APIMethodsManager: NSObject {
             println("Error in 'getContactsByIDs' - \(error?.localizedDescription)")
         } else {
             return apiManager.getAccounts(data!)
+        }
+        
+        return nil
+    }
+    
+    // MARK: - Workflow methods
+    
+    func getWorkflowsIn(Account id: String) -> [Workflow]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getWorkflowsInAccount' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getWorkflows(data!)
         }
         
         return nil

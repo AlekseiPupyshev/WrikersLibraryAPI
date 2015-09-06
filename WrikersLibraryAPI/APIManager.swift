@@ -61,16 +61,22 @@ class APIManager: NSObject {
     
     // MARK: - Workflows
     
-    func getWorkflowsInAccount() {
+    func getWorkflows(data: NSData) -> [Workflow] {
+        var json = JSON(data: data)
+        var workflows: [Workflow] = []
         
-    }
-    
-    func createWorkfwlow() {
+        for workflowElem in 0...json["data"].count - 1 {
+            var workflow = Workflow()
+            
+            workflow.id = json["data"][workflowElem]["id"].stringValue
+            workflow.name = json["data"][workflowElem]["name"].stringValue
+            workflow.standard = json["data"][workflowElem]["standart"].boolValue
+            workflow.hidden = json["data"][workflowElem]["hidden"].boolValue
+            
+            workflows.append(workflow)
+        }
         
-    }
-    
-    func modifyWorkflow() {
-    
+        return workflows
     }
     
     // MARK: - Folders

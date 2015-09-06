@@ -1,5 +1,5 @@
 //
-//  Workflows.swift
+//  Workflow.swift
 //  WrikersLibraryAPI
 //
 //  Created by cmashinho on 06/09/15.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Workflows: NSObject {
+class Workflow: NSObject {
     var id: String = ""
     var name: String = ""
     var standard: Bool = true
     var hidden: Bool = false
-    var customStatuses: [String : String] = ["id" : "", "name" : "", "standard" : "", "group" : "", "hidden" : ""]
+    //var customStatuses: [String : String] = ["id" : "", "name" : "", "standard" : "", "group" : "", "hidden" : ""]
 }

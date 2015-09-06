@@ -17,7 +17,7 @@
 		9F0D6DD41B9C587500D854AA /* APIMethodsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */; };
 		9F0D6DD61B9C5DEF00D854AA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD51B9C5DEF00D854AA /* Contact.swift */; };
 		9F0D6DD81B9C617500D854AA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD71B9C617500D854AA /* Account.swift */; };
-		9F0D6DDB1B9C620F00D854AA /* Workflows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DDA1B9C620F00D854AA /* Workflows.swift */; };
+		9F0D6DDB1B9C620F00D854AA /* Workflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DDA1B9C620F00D854AA /* Workflow.swift */; };
 		9F0D6DDD1B9C629F00D854AA /* FolderTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DDC1B9C629F00D854AA /* FolderTree.swift */; };
 		9F0D6DDF1B9C62DE00D854AA /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DDE1B9C62DE00D854AA /* Folder.swift */; };
 		9F0D6DE11B9C634D00D854AA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE01B9C634D00D854AA /* Task.swift */; };
@@ -53,7 +53,7 @@
 		9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethodsManager.swift; sourceTree = "<group>"; };
 		9F0D6DD51B9C5DEF00D854AA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		9F0D6DD71B9C617500D854AA /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		9F0D6DDA1B9C620F00D854AA /* Workflows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workflows.swift; sourceTree = "<group>"; };
+		9F0D6DDA1B9C620F00D854AA /* Workflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workflow.swift; sourceTree = "<group>"; };
 		9F0D6DDC1B9C629F00D854AA /* FolderTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTree.swift; sourceTree = "<group>"; };
 		9F0D6DDE1B9C62DE00D854AA /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		9F0D6DE01B9C634D00D854AA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			children = (
 				9F0D6DD51B9C5DEF00D854AA /* Contact.swift */,
 				9F0D6DD71B9C617500D854AA /* Account.swift */,
-				9F0D6DDA1B9C620F00D854AA /* Workflows.swift */,
+				9F0D6DDA1B9C620F00D854AA /* Workflow.swift */,
 				9F0D6DDC1B9C629F00D854AA /* FolderTree.swift */,
 				9F0D6DDE1B9C62DE00D854AA /* Folder.swift */,
 				9F0D6DE01B9C634D00D854AA /* Task.swift */,
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0D6DDB1B9C620F00D854AA /* Workflows.swift in Sources */,
+				9F0D6DDB1B9C620F00D854AA /* Workflow.swift in Sources */,
 				9F0D6DD31B9C587500D854AA /* APIManager.swift in Sources */,
 				9F0D6DE11B9C634D00D854AA /* Task.swift in Sources */,
 				9F0D6DB01B9C585900D854AA /* ViewController.swift in Sources */,
