@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F0D6DAE1B9C585900D854AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DAD1B9C585900D854AA /* AppDelegate.swift */; };
+		9F0D6DB01B9C585900D854AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DAF1B9C585900D854AA /* ViewController.swift */; };
+		9F0D6DB31B9C585900D854AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0D6DB11B9C585900D854AA /* Main.storyboard */; };
+		9F0D6DB51B9C585900D854AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0D6DB41B9C585900D854AA /* Images.xcassets */; };
+		9F0D6DB81B9C585900D854AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F0D6DB61B9C585900D854AA /* LaunchScreen.xib */; };
+		9F0D6DC41B9C585A00D854AA /* WrikersLibraryAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DC31B9C585A00D854AA /* WrikersLibraryAPITests.swift */; };
+		9F0D6DD31B9C587500D854AA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD11B9C587500D854AA /* APIManager.swift */; };
+		9F0D6DD41B9C587500D854AA /* APIMethodsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F0D6DBE1B9C585A00D854AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F0D6DA01B9C585900D854AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F0D6DA71B9C585900D854AA;
+			remoteInfo = WrikersLibraryAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F0D6DA81B9C585900D854AA /* WrikersLibraryAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrikersLibraryAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0D6DAC1B9C585900D854AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0D6DAD1B9C585900D854AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F0D6DAF1B9C585900D854AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F0D6DB21B9C585900D854AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F0D6DB41B9C585900D854AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F0D6DB71B9C585900D854AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9F0D6DBD1B9C585A00D854AA /* WrikersLibraryAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WrikersLibraryAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0D6DC21B9C585A00D854AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0D6DC31B9C585A00D854AA /* WrikersLibraryAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrikersLibraryAPITests.swift; sourceTree = "<group>"; };
+		9F0D6DD11B9C587500D854AA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethodsManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F0D6DA51B9C585900D854AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F0D6DBA1B9C585A00D854AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F0D6D9F1B9C585900D854AA = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DAA1B9C585900D854AA /* WrikersLibraryAPI */,
+				9F0D6DC01B9C585A00D854AA /* WrikersLibraryAPITests */,
+				9F0D6DA91B9C585900D854AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F0D6DA91B9C585900D854AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DA81B9C585900D854AA /* WrikersLibraryAPI.app */,
+				9F0D6DBD1B9C585A00D854AA /* WrikersLibraryAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F0D6DAA1B9C585900D854AA /* WrikersLibraryAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DD01B9C586800D854AA /* API */,
+				9F0D6DCF1B9C586400D854AA /* Controller */,
+				9F0D6DCE1B9C586100D854AA /* View */,
+				9F0D6DCD1B9C585E00D854AA /* Model */,
+				9F0D6DAD1B9C585900D854AA /* AppDelegate.swift */,
+				9F0D6DAF1B9C585900D854AA /* ViewController.swift */,
+				9F0D6DB11B9C585900D854AA /* Main.storyboard */,
+				9F0D6DB41B9C585900D854AA /* Images.xcassets */,
+				9F0D6DB61B9C585900D854AA /* LaunchScreen.xib */,
+				9F0D6DAB1B9C585900D854AA /* Supporting Files */,
+			);
+			path = WrikersLibraryAPI;
+			sourceTree = "<group>";
+		};
+		9F0D6DAB1B9C585900D854AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DAC1B9C585900D854AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F0D6DC01B9C585A00D854AA /* WrikersLibraryAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DC31B9C585A00D854AA /* WrikersLibraryAPITests.swift */,
+				9F0D6DC11B9C585A00D854AA /* Supporting Files */,
+			);
+			path = WrikersLibraryAPITests;
+			sourceTree = "<group>";
+		};
+		9F0D6DC11B9C585A00D854AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DC21B9C585A00D854AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F0D6DCD1B9C585E00D854AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9F0D6DCE1B9C586100D854AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9F0D6DCF1B9C586400D854AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9F0D6DD01B9C586800D854AA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DD11B9C587500D854AA /* APIManager.swift */,
+				9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F0D6DA71B9C585900D854AA /* WrikersLibraryAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F0D6DC71B9C585A00D854AA /* Build configuration list for PBXNativeTarget "WrikersLibraryAPI" */;
+			buildPhases = (
+				9F0D6DA41B9C585900D854AA /* Sources */,
+				9F0D6DA51B9C585900D854AA /* Frameworks */,
+				9F0D6DA61B9C585900D854AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WrikersLibraryAPI;
+			productName = WrikersLibraryAPI;
+			productReference = 9F0D6DA81B9C585900D854AA /* WrikersLibraryAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F0D6DBC1B9C585A00D854AA /* WrikersLibraryAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F0D6DCA1B9C585A00D854AA /* Build configuration list for PBXNativeTarget "WrikersLibraryAPITests" */;
+			buildPhases = (
+				9F0D6DB91B9C585A00D854AA /* Sources */,
+				9F0D6DBA1B9C585A00D854AA /* Frameworks */,
+				9F0D6DBB1B9C585A00D854AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F0D6DBF1B9C585A00D854AA /* PBXTargetDependency */,
+			);
+			name = WrikersLibraryAPITests;
+			productName = WrikersLibraryAPITests;
+			productReference = 9F0D6DBD1B9C585A00D854AA /* WrikersLibraryAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F0D6DA01B9C585900D854AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = cmashinho;
+				TargetAttributes = {
+					9F0D6DA71B9C585900D854AA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					9F0D6DBC1B9C585A00D854AA = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 9F0D6DA71B9C585900D854AA;
+					};
+				};
+			};
+			buildConfigurationList = 9F0D6DA31B9C585900D854AA /* Build configuration list for PBXProject "WrikersLibraryAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F0D6D9F1B9C585900D854AA;
+			productRefGroup = 9F0D6DA91B9C585900D854AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F0D6DA71B9C585900D854AA /* WrikersLibraryAPI */,
+				9F0D6DBC1B9C585A00D854AA /* WrikersLibraryAPITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F0D6DA61B9C585900D854AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0D6DB31B9C585900D854AA /* Main.storyboard in Resources */,
+				9F0D6DB81B9C585900D854AA /* LaunchScreen.xib in Resources */,
+				9F0D6DB51B9C585900D854AA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F0D6DBB1B9C585A00D854AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F0D6DA41B9C585900D854AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0D6DD31B9C587500D854AA /* APIManager.swift in Sources */,
+				9F0D6DB01B9C585900D854AA /* ViewController.swift in Sources */,
+				9F0D6DAE1B9C585900D854AA /* AppDelegate.swift in Sources */,
+				9F0D6DD41B9C587500D854AA /* APIMethodsManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F0D6DB91B9C585A00D854AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0D6DC41B9C585A00D854AA /* WrikersLibraryAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F0D6DBF1B9C585A00D854AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F0D6DA71B9C585900D854AA /* WrikersLibraryAPI */;
+			targetProxy = 9F0D6DBE1B9C585A00D854AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F0D6DB11B9C585900D854AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F0D6DB21B9C585900D854AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F0D6DB61B9C585900D854AA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F0D6DB71B9C585900D854AA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F0D6DC51B9C585A00D854AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F0D6DC61B9C585A00D854AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F0D6DC81B9C585A00D854AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WrikersLibraryAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9F0D6DC91B9C585A00D854AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WrikersLibraryAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9F0D6DCB1B9C585A00D854AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WrikersLibraryAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WrikersLibraryAPI.app/WrikersLibraryAPI";
+			};
+			name = Debug;
+		};
+		9F0D6DCC1B9C585A00D854AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WrikersLibraryAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WrikersLibraryAPI.app/WrikersLibraryAPI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F0D6DA31B9C585900D854AA /* Build configuration list for PBXProject "WrikersLibraryAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F0D6DC51B9C585A00D854AA /* Debug */,
+				9F0D6DC61B9C585A00D854AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F0D6DC71B9C585A00D854AA /* Build configuration list for PBXNativeTarget "WrikersLibraryAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F0D6DC81B9C585A00D854AA /* Debug */,
+				9F0D6DC91B9C585A00D854AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F0D6DCA1B9C585A00D854AA /* Build configuration list for PBXNativeTarget "WrikersLibraryAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F0D6DCB1B9C585A00D854AA /* Debug */,
+				9F0D6DCC1B9C585A00D854AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F0D6DA01B9C585900D854AA /* Project object */;
+}
