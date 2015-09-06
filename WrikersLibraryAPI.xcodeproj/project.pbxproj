@@ -15,6 +15,16 @@
 		9F0D6DC41B9C585A00D854AA /* WrikersLibraryAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DC31B9C585A00D854AA /* WrikersLibraryAPITests.swift */; };
 		9F0D6DD31B9C587500D854AA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD11B9C587500D854AA /* APIManager.swift */; };
 		9F0D6DD41B9C587500D854AA /* APIMethodsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */; };
+		9F0D6DD61B9C5DEF00D854AA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD51B9C5DEF00D854AA /* Contact.swift */; };
+		9F0D6DD81B9C617500D854AA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DD71B9C617500D854AA /* Account.swift */; };
+		9F0D6DDB1B9C620F00D854AA /* Workflows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DDA1B9C620F00D854AA /* Workflows.swift */; };
+		9F0D6DDD1B9C629F00D854AA /* FolderTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DDC1B9C629F00D854AA /* FolderTree.swift */; };
+		9F0D6DDF1B9C62DE00D854AA /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DDE1B9C62DE00D854AA /* Folder.swift */; };
+		9F0D6DE11B9C634D00D854AA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE01B9C634D00D854AA /* Task.swift */; };
+		9F0D6DE31B9C645A00D854AA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE21B9C645A00D854AA /* Comment.swift */; };
+		9F0D6DE51B9C64BA00D854AA /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE41B9C64BA00D854AA /* Attachment.swift */; };
+		9F0D6DE81B9C64DE00D854AA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE71B9C64DE00D854AA /* SwiftyJSON.swift */; };
+		9F0D6DEA1B9C64EC00D854AA /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE91B9C64EC00D854AA /* HTTPManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,16 @@
 		9F0D6DC31B9C585A00D854AA /* WrikersLibraryAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrikersLibraryAPITests.swift; sourceTree = "<group>"; };
 		9F0D6DD11B9C587500D854AA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethodsManager.swift; sourceTree = "<group>"; };
+		9F0D6DD51B9C5DEF00D854AA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		9F0D6DD71B9C617500D854AA /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		9F0D6DDA1B9C620F00D854AA /* Workflows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workflows.swift; sourceTree = "<group>"; };
+		9F0D6DDC1B9C629F00D854AA /* FolderTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTree.swift; sourceTree = "<group>"; };
+		9F0D6DDE1B9C62DE00D854AA /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		9F0D6DE01B9C634D00D854AA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		9F0D6DE21B9C645A00D854AA /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9F0D6DE41B9C64BA00D854AA /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		9F0D6DE71B9C64DE00D854AA /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		9F0D6DE91B9C64EC00D854AA /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +101,7 @@
 		9F0D6DAA1B9C585900D854AA /* WrikersLibraryAPI */ = {
 			isa = PBXGroup;
 			children = (
+				9F0D6DE61B9C64D000D854AA /* Libraries */,
 				9F0D6DD01B9C586800D854AA /* API */,
 				9F0D6DCF1B9C586400D854AA /* Controller */,
 				9F0D6DCE1B9C586100D854AA /* View */,
@@ -123,6 +144,14 @@
 		9F0D6DCD1B9C585E00D854AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F0D6DD51B9C5DEF00D854AA /* Contact.swift */,
+				9F0D6DD71B9C617500D854AA /* Account.swift */,
+				9F0D6DDA1B9C620F00D854AA /* Workflows.swift */,
+				9F0D6DDC1B9C629F00D854AA /* FolderTree.swift */,
+				9F0D6DDE1B9C62DE00D854AA /* Folder.swift */,
+				9F0D6DE01B9C634D00D854AA /* Task.swift */,
+				9F0D6DE21B9C645A00D854AA /* Comment.swift */,
+				9F0D6DE41B9C64BA00D854AA /* Attachment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -146,8 +175,17 @@
 			children = (
 				9F0D6DD11B9C587500D854AA /* APIManager.swift */,
 				9F0D6DD21B9C587500D854AA /* APIMethodsManager.swift */,
+				9F0D6DE91B9C64EC00D854AA /* HTTPManager.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		9F0D6DE61B9C64D000D854AA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DE71B9C64DE00D854AA /* SwiftyJSON.swift */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,10 +288,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0D6DDB1B9C620F00D854AA /* Workflows.swift in Sources */,
 				9F0D6DD31B9C587500D854AA /* APIManager.swift in Sources */,
+				9F0D6DE11B9C634D00D854AA /* Task.swift in Sources */,
 				9F0D6DB01B9C585900D854AA /* ViewController.swift in Sources */,
+				9F0D6DE51B9C64BA00D854AA /* Attachment.swift in Sources */,
+				9F0D6DDD1B9C629F00D854AA /* FolderTree.swift in Sources */,
+				9F0D6DD61B9C5DEF00D854AA /* Contact.swift in Sources */,
+				9F0D6DEA1B9C64EC00D854AA /* HTTPManager.swift in Sources */,
 				9F0D6DAE1B9C585900D854AA /* AppDelegate.swift in Sources */,
 				9F0D6DD41B9C587500D854AA /* APIMethodsManager.swift in Sources */,
+				9F0D6DD81B9C617500D854AA /* Account.swift in Sources */,
+				9F0D6DE31B9C645A00D854AA /* Comment.swift in Sources */,
+				9F0D6DE81B9C64DE00D854AA /* SwiftyJSON.swift in Sources */,
+				9F0D6DDF1B9C62DE00D854AA /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +497,7 @@
 				9F0D6DC91B9C585A00D854AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F0D6DCA1B9C585A00D854AA /* Build configuration list for PBXNativeTarget "WrikersLibraryAPITests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +506,7 @@
 				9F0D6DCC1B9C585A00D854AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
