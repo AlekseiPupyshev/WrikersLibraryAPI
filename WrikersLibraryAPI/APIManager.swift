@@ -81,16 +81,22 @@ class APIManager: NSObject {
     
     // MARK: - Folders
     
-    func getFolderTreeInAllAccounts() {
+    func getFolderTree(data: NSData) -> [FolderTree] {
+        var json = JSON(data: data)
+        var folders: [FolderTree] = []
         
-    }
-    
-    func getFolderTreeInAccount() {
+        for workflowElem in 0...json["data"].count - 1 {
+            var folder = FolderTree()
+            
+            folder.id = json["data"][workflowElem]["id"].stringValue
+            folder.title = json["data"][workflowElem]["title"].stringValue
+            folder.childIDs = json["data"][workflowElem]["childIds"].arrayObject as! [String]
+            folder.scope = json["data"][workflowElem]["scope"].stringValue
+            
+            folders.append(folder)
+        }
         
-    }
-    
-    func getFolderTreeInFolders() {
-        
+        return folders
     }
     
     func getFoldersByIDs() {

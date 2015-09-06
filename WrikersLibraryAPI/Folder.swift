@@ -17,9 +17,8 @@ class Folder: NSObject {
     var sharedIDs: [String] = []
     var parentsIDs: [String] = []
     var scope: String = ""
-    var scope: String = ""
     var hasAttachments: Bool = false
     var permalink: String = ""
     var workflowID: String = ""
-    var childIDs: [String] = ""
+    var childIDs: [String] = []
 }

@@ -121,7 +121,7 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    // MARK: - Workflow methods
+    // MARK: - Workflow method
     
     func getWorkflowsIn(Account id: String) -> [Workflow]? {
         var (data, error) = httpManager.getRequest("", parameters: "", token: token)
@@ -135,4 +135,43 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
+    // MARK: - FolderTree methods
+    
+    func getFolderTreeInAllAccounts() -> [FolderTree]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getFolderTreeInAllAccounts' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getFolderTree(data!)
+        }
+        
+        return nil
+    }
+    
+    func getFolderTreeInAccountBy(id: String) -> [FolderTree]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getFolderTreeInAccountBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getFolderTree(data!)
+        }
+        
+        return nil
+    }
+    
+    func getFolderTreeInFoldersBy(id: String) -> [FolderTree]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getFolderTreeInFoldersBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getFolderTree(data!)
+        }
+        
+        return nil
+    }
+    
+    // MARK: - Folder methods
 }
