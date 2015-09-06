@@ -55,4 +55,43 @@ class APIMethodsManager: NSObject {
             }
         }
     }
+    
+    
+    // MARK: - Contact methods
+    
+    func getAllContacts() -> [Contact]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getAllContacts' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getContacts(data!)
+        }
+        
+        return nil
+    }
+    
+    func getContactsIn(account id: String) -> [Contact]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getContactsInAccount' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getContacts(data!)
+        }
+        
+        return nil
+    }
+    
+    func getContactsBy(IDs: [String]) -> [Contact]? {
+        var (data, error) = httpManager.getRequest("", parameters: ",".join(IDs), token: token)
+        
+        if error != nil {
+            println("Error in 'getContactsByIDs' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getContacts(data!)
+        }
+        
+        return nil
+    }
 }

@@ -13,6 +13,7 @@ class Contact: NSObject {
     var firstName: String = ""
     var lastName: String = ""
     var type: String = ""
+    // TODO: - Profiles
     //var profiles: [String : String] = ["" : ""]
     var avatarURL: String = ""
     var timezone: String = ""

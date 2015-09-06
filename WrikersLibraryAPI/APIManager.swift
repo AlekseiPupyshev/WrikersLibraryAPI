@@ -12,73 +12,79 @@ class APIManager: NSObject {
     
     // MARK: - Contacts
     
-    class func getAllContacts() {
+    func getContacts(data: NSData) -> [Contact] {
+        var json = JSON(data: data)
+        var contacts: [Contact] = []
         
-    }
-    
-    class func getContactsInAccount() {
+        for contactElem in 0...json["data"].count - 1 {
+            var contact = Contact()
+            
+            contact.id = json["data"][contactElem]["id"].stringValue
+            contact.firstName = json["data"][contactElem]["firstName"].stringValue
+            contact.lastName = json["data"][contactElem]["lastName"].stringValue
+            contact.type = json["data"][contactElem]["type"].stringValue
+            contact.avatarURL = json["data"][contactElem]["avatarUrl"].stringValue
+            contact.timezone = json["data"][contactElem]["timezone"].stringValue
+            contact.locale = json["data"][contactElem]["locale"].stringValue
+            contact.deleted = json["data"][contactElem]["deleted"].boolValue
+            
+            contacts.append(contact)
+        }
         
-    }
-    
-    class func getContactsByIDs() {
-        
-    }
-    
-    class func modifyContact() {
-        
+        return contacts
     }
     
     // MARK: - Accounts
     
-    class func getAllAccounts() {
+    func getAllAccounts() {
         
     }
     
-    class func getAccountsByIDs() {
+    func getAccountsByIDs() {
         
     }
     
-    class func modifyAccount() {
+    func modifyAccount() {
         
     }
     
     // MARK: - Workflows
     
-    class func getWorkflowsInAccount() {
+    func getWorkflowsInAccount() {
         
     }
     
-    class func createWorkfwlow() {
+    func createWorkfwlow() {
         
     }
     
-    class func modifyWorkflow() {
+    func modifyWorkflow() {
     
     }
     
     // MARK: - Folders
     
-    class func getFolderTreeInAllAccounts() {
+    func getFolderTreeInAllAccounts() {
         
     }
     
-    class func getFolderTreeInAccount() {
+    func getFolderTreeInAccount() {
         
     }
     
-    class func getFolderTreeInFolders() {
+    func getFolderTreeInFolders() {
         
     }
     
-    class func getFoldersByIDs() {
+    func getFoldersByIDs() {
         
     }
     
-    class func createFolder() {
+    func createFolder() {
         
     }
     
-    class func modifyFolder() {
+    func modifyFolder() {
         
     }
     
@@ -88,19 +94,19 @@ class APIManager: NSObject {
     
     // MARK: - Tasks
     
-    class func getTasksInAllAccounts() {
+    func getTasksInAllAccounts() {
         
     }
     
-    class func getTasksInAccount() {
+    func getTasksInAccount() {
         
     }
     
-    class func getTasksInFolder() {
+    func getTasksInFolder() {
         
     }
     
-    class func getTasksByIDs() {
+    func getTasksByIDs() {
         
     }
     
@@ -108,91 +114,91 @@ class APIManager: NSObject {
         
     }
     
-    class func modifyTask() {
+    func modifyTask() {
         
     }
     
-    class func deleteTaskByIDs() {
+    func deleteTaskByIDs() {
         
     }
     
     // MARK: - Comments
     
-    class func getCommentsInAllAccounts() {
+    func getCommentsInAllAccounts() {
         
     }
     
-    class func getCommentsInAccount() {
+    func getCommentsInAccount() {
         
     }
     
-    class func getCommentsInFolder() {
+    func getCommentsInFolder() {
         
     }
     
-    class func getCommentsInTask() {
+    func getCommentsInTask() {
     
     }
     
-    class func getCommentsByIDs() {
+    func getCommentsByIDs() {
         
     }
     
-    class func createCommentInFolder() {
+    func createCommentInFolder() {
         
     }
     
-    class func createCommentInComment() {
+    func createCommentInComment() {
         
     }
     
-    class func updateCommentInFolder() {
+    func updateCommentInFolder() {
         
     }
     
-    class func deleteCommentByID() {
+    func deleteCommentByID() {
         
     }
     
     // MARK: - Attachemnts
     
-    class func getAttachmentsInFolder() {
+    func getAttachmentsInFolder() {
         
     }
     
-    class func getAttachmentsInTask() {
+    func getAttachmentsInTask() {
         
     }
     
-    class func getAttachmentsByIDs() {
+    func getAttachmentsByIDs() {
         
     }
     
-    class func downloadWrikeAttachmentByID() {
+    func downloadWrikeAttachmentByID() {
         
     }
     
-    class func getAccessURLForAttachmentByID() {
+    func getAccessURLForAttachmentByID() {
         
     }
     
-    class func downloadAttachmentPreviewByID() {
+    func downloadAttachmentPreviewByID() {
         
     }
     
-    class func createWrikeAttachmentInFolder() {
+    func createWrikeAttachmentInFolder() {
         
     }
     
-    class func createWrikeAttachmentInTaks() {
+    func createWrikeAttachmentInTaks() {
         
     }
     
-    class func updateAttachmentByID() {
+    func updateAttachmentByID() {
         
     }
     
-    class func deleteAttachmentByID() {
+    func deleteAttachmentByID() {
         
     }
 }

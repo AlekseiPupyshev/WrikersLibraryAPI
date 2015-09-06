@@ -25,6 +25,7 @@
 		9F0D6DE51B9C64BA00D854AA /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE41B9C64BA00D854AA /* Attachment.swift */; };
 		9F0D6DE81B9C64DE00D854AA /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE71B9C64DE00D854AA /* SwiftyJSON.swift */; };
 		9F0D6DEA1B9C64EC00D854AA /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DE91B9C64EC00D854AA /* HTTPManager.swift */; };
+		9F0D6DEE1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D6DEC1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		9F0D6DE41B9C64BA00D854AA /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		9F0D6DE71B9C64DE00D854AA /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9F0D6DE91B9C64EC00D854AA /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		9F0D6DED1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WrikersLibraryAPI.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		9F0D6DAA1B9C585900D854AA /* WrikersLibraryAPI */ = {
 			isa = PBXGroup;
 			children = (
+				9F0D6DEB1B9C6D7A00D854AA /* CoreData */,
 				9F0D6DE61B9C64D000D854AA /* Libraries */,
 				9F0D6DD01B9C586800D854AA /* API */,
 				9F0D6DCF1B9C586400D854AA /* Controller */,
@@ -186,6 +189,14 @@
 				9F0D6DE71B9C64DE00D854AA /* SwiftyJSON.swift */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		9F0D6DEB1B9C6D7A00D854AA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D6DEC1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 				9F0D6DD41B9C587500D854AA /* APIMethodsManager.swift in Sources */,
 				9F0D6DD81B9C617500D854AA /* Account.swift in Sources */,
 				9F0D6DE31B9C645A00D854AA /* Comment.swift in Sources */,
+				9F0D6DEE1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodeld in Sources */,
 				9F0D6DE81B9C64DE00D854AA /* SwiftyJSON.swift in Sources */,
 				9F0D6DDF1B9C62DE00D854AA /* Folder.swift in Sources */,
 			);
@@ -509,6 +521,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9F0D6DEC1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9F0D6DED1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodel */,
+			);
+			currentVersion = 9F0D6DED1B9C6D9400D854AA /* WrikersLibraryAPI.xcdatamodel */;
+			path = WrikersLibraryAPI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9F0D6DA01B9C585900D854AA /* Project object */;
 }
