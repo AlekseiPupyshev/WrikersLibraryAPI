@@ -36,16 +36,27 @@ class APIManager: NSObject {
     
     // MARK: - Accounts
     
-    func getAllAccounts() {
+    func getAccounts(data: NSData) -> [Account] {
+        var json = JSON(data: data)
+        var accounts: [Account] = []
         
-    }
-    
-    func getAccountsByIDs() {
+        for accountElem in 0...json["data"].count - 1 {
+            var account = Account()
+            
+            account.id = json["data"][accountElem]["id"].stringValue
+            account.name = json["data"][accountElem]["name"].stringValue
+            account.dateFormat = json["data"][accountElem]["dateFormat"].stringValue
+            account.firstDayOfWeek = json["data"][accountElem]["firstDayOfWeek"].stringValue
+            account.workDays = json["data"][accountElem]["workDays"].arrayObject as! [String]
+            account.rootFolderID = json["data"][accountElem]["rootFolderId"].stringValue
+            account.recycleBinID = json["data"][accountElem]["recycleBinId"].stringValue
+            account.createDate = json["data"][accountElem]["createDate"].stringValue
+            account.subscription = json["data"][accountElem]["subscription"].arrayObject as! [String]
+            
+            accounts.append(account)
+        }
         
-    }
-    
-    func modifyAccount() {
-        
+        return accounts
     }
     
     // MARK: - Workflows

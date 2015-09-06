@@ -94,4 +94,31 @@ class APIMethodsManager: NSObject {
         
         return nil
     }
+    
+    // MARK: - Account methods
+    
+    func getAllAccount() -> [Account]? {
+        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getAllAccount' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getAccounts(data!)
+        }
+        
+        return nil
+    }
+    
+    func getAccountsBy(IDs: [String]) -> [Account]? {
+        var (data, error) = httpManager.getRequest("", parameters: ",".join(IDs), token: token)
+        
+        if error != nil {
+            println("Error in 'getContactsByIDs' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getAccounts(data!)
+        }
+        
+        return nil
+    }
+    
 }
