@@ -104,22 +104,7 @@ class APIManager: NSObject {
         var folders: [Folder] = []
         
         for folderElem in 0...json["data"].count - 1 {
-            var folder = Folder()
-            
-            folder.id = json["data"][folderElem]["id"].stringValue
-            folder.title = json["data"][folderElem]["title"].stringValue
-            folder.createdDate = json["data"][folderElem]["createdDate"].stringValue
-            folder.briefDescription = json["data"][folderElem]["briefDescription"].stringValue
-            folder.folderDescription = json["data"][folderElem]["folderDescription"].stringValue
-            folder.sharedIDs = json["data"][folderElem]["sharedIds"].arrayObject as! [String]
-            folder.parentsIDs = json["data"][folderElem]["parentIds"].arrayObject as! [String]
-            folder.scope = json["data"][folderElem]["scope"].stringValue
-            folder.hasAttachments = json["data"][folderElem]["hasAttachments"].boolValue
-            folder.permalink = json["data"][folderElem]["permalink"].stringValue
-            folder.workflowID = json["data"][folderElem]["workflowId"].stringValue
-            folder.childIDs = json["data"][folderElem]["childIds"].arrayObject as! [String]
-            
-            folders.append(folder)
+            folders.append(apiCreateFolder(json["data"][folderElem]) as Folder)
         }
         
         return folders
@@ -127,24 +112,28 @@ class APIManager: NSObject {
     
     func createFolder(data: NSData) -> Folder {
         var json = JSON(data: data)
+        return apiCreateFolder(json["data"])
+    }
+    
+    
+    func apiCreateFolder(json: JSON) -> Folder {
         var folder = Folder()
         
-        folder.id = json["data"]["id"].stringValue
-        folder.title = json["data"]["title"].stringValue
-        folder.createdDate = json["data"]["createdDate"].stringValue
-        folder.briefDescription = json["data"]["briefDescription"].stringValue
-        folder.folderDescription = json["data"]["folderDescription"].stringValue
-        folder.sharedIDs = json["data"]["sharedIds"].arrayObject as! [String]
-        folder.parentsIDs = json["data"]["parentIds"].arrayObject as! [String]
-        folder.scope = json["data"]["scope"].stringValue
-        folder.hasAttachments = json["data"]["hasAttachments"].boolValue
-        folder.permalink = json["data"]["permalink"].stringValue
-        folder.workflowID = json["data"]["workflowId"].stringValue
-        folder.childIDs = json["data"]["childIds"].arrayObject as! [String]
+        folder.id = json["id"].stringValue
+        folder.title = json["title"].stringValue
+        folder.createdDate = json["createdDate"].stringValue
+        folder.briefDescription = json["briefDescription"].stringValue
+        folder.folderDescription = json["folderDescription"].stringValue
+        folder.sharedIDs = json["sharedIds"].arrayObject as! [String]
+        folder.parentsIDs = json["parentIds"].arrayObject as! [String]
+        folder.scope = json["scope"].stringValue
+        folder.hasAttachments = json["hasAttachments"].boolValue
+        folder.permalink = json["permalink"].stringValue
+        folder.workflowID = json["workflowId"].stringValue
+        folder.childIDs = json["childIds"].arrayObject as! [String]
         
         return folder
     }
-    
     
     // MARK: - Tasks
     
@@ -153,30 +142,7 @@ class APIManager: NSObject {
         var tasks: [Task] = []
         
         for taskElem in 0...json["data"].count - 1 {
-            var task = Task()
-            
-            task.id = json["data"][taskElem]["id"].stringValue
-            task.title = json["data"][taskElem]["title"].stringValue
-            task.taskDescription = json["data"][taskElem]["description"].stringValue
-            task.briefDescription = json["data"][taskElem]["briefDescription"].stringValue
-            task.parentsIDs = json["data"][taskElem]["parentIds"].arrayObject as! [String]
-            task.sharedIDs = json["data"][taskElem]["sharedIds"].arrayObject as! [String]
-            task.responsibleIDs = json["data"][taskElem]["responsibleIds"].arrayObject as! [String]
-            task.status = json["data"][taskElem]["status"].stringValue
-            task.importance = json["data"][taskElem]["importance"].stringValue
-            task.permalink = json["data"][taskElem]["permalink"].stringValue
-            task.createdDate = json["data"][taskElem]["createdDate"].stringValue
-            task.updatedDate = json["data"][taskElem]["updatedDate"].stringValue
-            task.scope = json["data"][taskElem]["scope"].stringValue
-            task.authorIDs = json["data"][taskElem]["authorIds"].arrayObject as! [String]
-            task.accountIDs = json["data"][taskElem]["accountIDs"].stringValue
-            task.customStatusID = json["data"][taskElem]["customStatusId"].stringValue
-            task.permalink = json["data"][taskElem]["permalink"].stringValue
-            task.priority = json["data"][taskElem]["priority"].stringValue
-            task.superTaskIDs = json["data"][taskElem]["superTaskIds"].arrayObject as! [String]
-            task.subTaskIDs = json["data"][taskElem]["subTaskIds"].arrayObject as! [String]
-            
-            tasks.append(task)
+            tasks.append(apiCreateTask(json["data"][taskElem]) as Task)
         }
         
         return tasks
@@ -184,29 +150,33 @@ class APIManager: NSObject {
     
     func createTask(data: NSData) -> Task {
         var json = JSON(data: data)
+        return apiCreateTask(json["data"]) as Task
+    }
+    
+    func apiCreateTask(json: JSON) -> Task {
         var task = Task()
         
-        task.id = json["data"]["id"].stringValue
-        task.title = json["data"]["title"].stringValue
-        task.taskDescription = json["data"]["description"].stringValue
-        task.briefDescription = json["data"]["briefDescription"].stringValue
-        task.parentsIDs = json["data"]["parentIds"].arrayObject as! [String]
-        task.sharedIDs = json["data"]["sharedIds"].arrayObject as! [String]
-        task.responsibleIDs = json["data"]["responsibleIds"].arrayObject as! [String]
-        task.status = json["data"]["status"].stringValue
-        task.importance = json["data"]["importance"].stringValue
-        task.permalink = json["data"]["permalink"].stringValue
-        task.createdDate = json["data"]["createdDate"].stringValue
-        task.updatedDate = json["data"]["updatedDate"].stringValue
-        task.scope = json["data"]["scope"].stringValue
-        task.authorIDs = json["data"]["authorIds"].arrayObject as! [String]
-        task.accountIDs = json["data"]["accountIDs"].stringValue
-        task.customStatusID = json["data"]["customStatusId"].stringValue
-        task.permalink = json["data"]["permalink"].stringValue
-        task.priority = json["data"]["priority"].stringValue
-        task.superTaskIDs = json["data"]["superTaskIds"].arrayObject as! [String]
-        task.subTaskIDs = json["data"]["subTaskIds"].arrayObject as! [String]
-    
+        task.id = json["id"].stringValue
+        task.title = json["title"].stringValue
+        task.taskDescription = json["description"].stringValue
+        task.briefDescription = json["briefDescription"].stringValue
+        task.parentsIDs = json["parentIds"].arrayObject as! [String]
+        task.sharedIDs = json["sharedIds"].arrayObject as! [String]
+        task.responsibleIDs = json["responsibleIds"].arrayObject as! [String]
+        task.status = json["status"].stringValue
+        task.importance = json["importance"].stringValue
+        task.permalink = json["permalink"].stringValue
+        task.createdDate = json["createdDate"].stringValue
+        task.updatedDate = json["updatedDate"].stringValue
+        task.scope = json["scope"].stringValue
+        task.authorIDs = json["authorIds"].arrayObject as! [String]
+        task.accountIDs = json["accountIDs"].stringValue
+        task.customStatusID = json["customStatusId"].stringValue
+        task.permalink = json["permalink"].stringValue
+        task.priority = json["priority"].stringValue
+        task.superTaskIDs = json["superTaskIds"].arrayObject as! [String]
+        task.subTaskIDs = json["subTaskIds"].arrayObject as! [String]
+        
         return task
     }
     
@@ -217,15 +187,7 @@ class APIManager: NSObject {
         var comments: [Comment] = []
         
         for commentElem in 0...json["data"].count - 1 {
-            var comment = Comment()
-            
-            comment.id = json["data"][commentElem]["id"].stringValue
-            comment.authorID = json["data"][commentElem]["authorId"].stringValue
-            comment.text = json["data"][commentElem]["text"].stringValue
-            comment.updatedDate = json["data"][commentElem]["updatedDate"].stringValue
-            comment.taskID = json["data"][commentElem]["taskId"].stringValue
-            
-            comments.append(comment)
+            comments.append(apiCreateComment(json["data"]) as Comment)
         }
         
         return comments
@@ -233,30 +195,25 @@ class APIManager: NSObject {
     
     func createComment(data: NSData) -> Comment {
         var json = JSON(data)
-        var comment = Comment()
-            
-        comment.id = json["data"]["id"].stringValue
-        comment.authorID = json["data"]["authorId"].stringValue
-        comment.text = json["data"]["text"].stringValue
-        comment.updatedDate = json["data"]["updatedDate"].stringValue
-        comment.taskID = json["data"]["taskId"].stringValue
-            
-        return comment
+        return apiCreateComment(json["data"]) as Comment
     }
     
     func updateComment(data: NSData) -> Comment {
         var json = JSON(data)
+        return apiCreateComment(json["data"]) as Comment
+    }
+    
+    func apiCreateComment(json: JSON) -> Comment {
         var comment = Comment()
         
-        comment.id = json["data"]["id"].stringValue
-        comment.authorID = json["data"]["authorId"].stringValue
-        comment.text = json["data"]["text"].stringValue
-        comment.updatedDate = json["data"]["updatedDate"].stringValue
-        comment.taskID = json["data"]["taskId"].stringValue
+        comment.id = json["id"].stringValue
+        comment.authorID = json["authorId"].stringValue
+        comment.text = json["text"].stringValue
+        comment.updatedDate = json["updatedDate"].stringValue
+        comment.taskID = json["taskId"].stringValue
         
         return comment
     }
-    
     
     // MARK: - Attachemnts
     

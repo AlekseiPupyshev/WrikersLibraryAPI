@@ -59,8 +59,8 @@ class APIMethodsManager: NSObject {
     
     // MARK: - Contact methods
     
-    func getAllContacts() -> [Contact]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getAllContacts(parameters: String) -> [Contact]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/contacts", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getAllContacts' - \(error?.localizedDescription)")
@@ -71,8 +71,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getContactsIn(Account id: String) -> [Contact]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getContactsIn(Account id: String, parameters: String) -> [Contact]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/accounts/" + id + "contacts", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getContactsInAccount' - \(error?.localizedDescription)")
@@ -83,8 +83,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getContactsBy(IDs: [String]) -> [Contact]? {
-        var (data, error) = httpManager.getRequest("", parameters: ",".join(IDs), token: token)
+    func getContactsBy(IDs: [String], parameters: String) -> [Contact]? {
+        var (data, error) = httpManager.getRequest("'https://www.wrike.com/api/v3/contacts/" + ",".join(IDs), parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getContactsByIDs' - \(error?.localizedDescription)")
@@ -97,8 +97,8 @@ class APIMethodsManager: NSObject {
     
     // MARK: - Account methods
     
-    func getAllAccount() -> [Account]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getAllAccount(parameters: String) -> [Account]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/accounts", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getAllAccount' - \(error?.localizedDescription)")
@@ -109,8 +109,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getAccountsBy(IDs: [String]) -> [Account]? {
-        var (data, error) = httpManager.getRequest("", parameters: ",".join(IDs), token: token)
+    func getAccountsBy(IDs: [String], parameters: String) -> [Account]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/accounts" + ",".join(IDs), parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getContactsByIDs' - \(error?.localizedDescription)")
@@ -123,8 +123,8 @@ class APIMethodsManager: NSObject {
     
     // MARK: - Workflow method
     
-    func getWorkflowsIn(Account id: String) -> [Workflow]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getWorkflowsIn(Account id: String, parameters: String) -> [Workflow]? {
+        var (data, error) = httpManager.getRequest("'https://www.wrike.com/api/v3/accounts/" + id + "workflows", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getWorkflowsInAccount' - \(error?.localizedDescription)")
@@ -137,8 +137,8 @@ class APIMethodsManager: NSObject {
     
     // MARK: - FolderTree methods
     
-    func getFolderTreeInAllAccounts() -> [FolderTree]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getFolderTreeInAllAccounts(parameters: String) -> [FolderTree]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/folders", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getFolderTreeInAllAccounts' - \(error?.localizedDescription)")
@@ -149,8 +149,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getFolderTreeInAccountBy(id: String) -> [FolderTree]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getFolderTreeInAccountBy(id: String, parameters: String) -> [FolderTree]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/accounts/" + id + "/folders", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getFolderTreeInAccountBy' - \(error?.localizedDescription)")
@@ -161,8 +161,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getFolderTreeInFoldersBy(id: String) -> [FolderTree]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getFolderTreeInFoldersBy(id: String, parameters: String) -> [FolderTree]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/folders/" + id + "/folders", parameters: "", token: token)
         
         if error != nil {
             println("Error in 'getFolderTreeInFoldersBy' - \(error?.localizedDescription)")
@@ -175,8 +175,8 @@ class APIMethodsManager: NSObject {
     
     // MARK: - Folder methods
     
-    func getFoldersBy(IDs: [String]) -> [Folder]? {
-        var (data, error) = httpManager.getRequest("", parameters: ",".join(IDs), token: token)
+    func getFoldersBy(IDs: [String], parameters: String) -> [Folder]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/folders/" + ",".join(IDs), parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getFoldersBy' - \(error?.localizedDescription)")
@@ -187,8 +187,10 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func createFolder() -> Folder? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func createFolder(parameters: String) -> Folder? {
+        //  /api/v3/folders/IEAAALNZI4AC7MZC/folders
+        // TODO: - Create post request
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
         
         if error != nil {
             println("Error in 'createFolder' - \(error?.localizedDescription)")
@@ -201,8 +203,8 @@ class APIMethodsManager: NSObject {
     
     // MARK: - Taksk methods
     
-    func getTasksInAllAccounts() -> [Task]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getTasksInAllAccounts(parameters: String) -> [Task]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/tasks", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getTasksInAllAccounts' - \(error?.localizedDescription)")
@@ -213,8 +215,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getTasksInAccountBy(id: String) -> [Task]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getTasksInAccountBy(id: String, parameters: String) -> [Task]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/accounts/" + id + "/tasks", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getTasksInAccountBy' - \(error?.localizedDescription)")
@@ -225,8 +227,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getTasksInFolderBy(id: String) -> [Task]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getTasksInFolderBy(id: String, parameters: String) -> [Task]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/folders/" + id + "/tasks", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getTasksInFolderBy' - \(error?.localizedDescription)")
@@ -237,8 +239,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getTasksBy(IDs: [String]) -> [Task]? {
-        var (data, error) = httpManager.getRequest("", parameters: "", token: token)
+    func getTasksBy(IDs: [String], parameters: String) -> [Task]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/tasks/" + ",".join(IDs), parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getTasksBy' - \(error?.localizedDescription)")
@@ -249,7 +251,9 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func createTask() -> Task? {
+    func createTask(parameters: String) -> Task? {
+        // /api/v3/folders/IEAAALNZI4AC7MZC/tasks
+        // TODO: - Create post request
         var (data, error) = httpManager.postRequest("", parameters: "", token: token)
         
         if error != nil {
@@ -263,8 +267,9 @@ class APIMethodsManager: NSObject {
     
     // MARK: - Comment methods
     
-    func getCommentsInAllAccounts() -> [Comment]? {
-        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+    func getCommentsInAllAccounts(parameters: String) -> [Comment]? {
+        
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/comments", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getCommentsInAllAccounts' - \(error?.localizedDescription)")
@@ -275,8 +280,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getCommentsInAccountBy(id: String) -> [Comment]? {
-        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+    func getCommentsInAccountBy(id: String, parameters: String) -> [Comment]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/accounts/" + id + "/comments", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getCommentsInAccountBy' - \(error?.localizedDescription)")
@@ -287,8 +292,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getCommentsInFolderBy(id: String) -> [Comment]? {
-        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+    func getCommentsInFolderBy(id: String, parameters: String) -> [Comment]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/folders/" + id + "/comments", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getCommentsInFolderBy' - \(error?.localizedDescription)")
@@ -299,8 +304,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getCommentsInTaskBy(id: String) -> [Comment]? {
-        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+    func getCommentsInTaskBy(id: String, parameters: String) -> [Comment]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/tasks/" + id + "/comments", parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getCommentsInTaskBy' - \(error?.localizedDescription)")
@@ -311,8 +316,8 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func getCommentsBy(IDs: [String]) -> [Comment]? {
-        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+    func getCommentsBy(IDs: [String], parameters: String) -> [Comment]? {
+        var (data, error) = httpManager.getRequest("https://www.wrike.com/api/v3/comments/" + ",".join(IDs), parameters: parameters, token: token)
         
         if error != nil {
             println("Error in 'getCommentsBy' - \(error?.localizedDescription)")
@@ -323,7 +328,9 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func createCommentInFolderBy(id: String) -> Comment? {
+    func createCommentInFolderBy(id: String, parameters: String) -> Comment? {
+        // /api/v3/folders/IEAAALNZI4AC7MZC/comments
+        // TODO: - Create post request
         var (data, error) = httpManager.postRequest("", parameters: "", token: token)
         
         if error != nil {
@@ -335,7 +342,9 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func createCommentInCommentBy(id: String) -> Comment? {
+    func createCommentInCommentBy(id: String, parameters: String) -> Comment? {
+        // /api/v3/tasks/IEAAALNZKQAC7MZH/comments
+        // TODO: - Create post request
         var (data, error) = httpManager.postRequest("", parameters: "", token: token)
         
         if error != nil {
@@ -347,7 +356,9 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
-    func updateCommentInFolderBy(id: String) -> Comment? {
+    func updateCommentInFolderBy(id: String, parameters: String) -> Comment? {
+        // /api/v3/comments/IEAAALNZIMABQ3FJ
+        // TODO: - Create put request
         var (data, error) = httpManager.postRequest("", parameters: "", token: token)
         
         if error != nil {
