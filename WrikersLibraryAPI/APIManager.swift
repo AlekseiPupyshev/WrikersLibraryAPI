@@ -182,7 +182,7 @@ class APIManager: NSObject {
         return tasks
     }
     
-    class func createTask(data: NSData) -> Task {
+    func createTask(data: NSData) -> Task {
         var json = JSON(data: data)
         var task = Task()
         
@@ -210,51 +210,53 @@ class APIManager: NSObject {
         return task
     }
     
-    func modifyTask() {
-        
-    }
-    
-    func deleteTaskByIDs() {
-        
-    }
-    
     // MARK: - Comments
     
-    func getCommentsInAllAccounts() {
+    func getComments(data: NSData) -> [Comment] {
+        var json = JSON(data)
+        var comments: [Comment] = []
         
-    }
-    
-    func getCommentsInAccount() {
+        for commentElem in 0...json["data"].count - 1 {
+            var comment = Comment()
+            
+            comment.id = json["data"][commentElem]["id"].stringValue
+            comment.authorID = json["data"][commentElem]["authorId"].stringValue
+            comment.text = json["data"][commentElem]["text"].stringValue
+            comment.updatedDate = json["data"][commentElem]["updatedDate"].stringValue
+            comment.taskID = json["data"][commentElem]["taskId"].stringValue
+            
+            comments.append(comment)
+        }
         
+        return comments
     }
     
-    func getCommentsInFolder() {
+    func createComment(data: NSData) -> Comment {
+        var json = JSON(data)
+        var comment = Comment()
+            
+        comment.id = json["data"]["id"].stringValue
+        comment.authorID = json["data"]["authorId"].stringValue
+        comment.text = json["data"]["text"].stringValue
+        comment.updatedDate = json["data"]["updatedDate"].stringValue
+        comment.taskID = json["data"]["taskId"].stringValue
+            
+        return comment
+    }
+    
+    func updateComment(data: NSData) -> Comment {
+        var json = JSON(data)
+        var comment = Comment()
         
-    }
-    
-    func getCommentsInTask() {
-    
-    }
-    
-    func getCommentsByIDs() {
+        comment.id = json["data"]["id"].stringValue
+        comment.authorID = json["data"]["authorId"].stringValue
+        comment.text = json["data"]["text"].stringValue
+        comment.updatedDate = json["data"]["updatedDate"].stringValue
+        comment.taskID = json["data"]["taskId"].stringValue
         
+        return comment
     }
     
-    func createCommentInFolder() {
-        
-    }
-    
-    func createCommentInComment() {
-        
-    }
-    
-    func updateCommentInFolder() {
-        
-    }
-    
-    func deleteCommentByID() {
-        
-    }
     
     // MARK: - Attachemnts
     

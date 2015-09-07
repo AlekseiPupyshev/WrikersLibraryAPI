@@ -261,4 +261,106 @@ class APIMethodsManager: NSObject {
         return nil
     }
     
+    // MARK: - Comment methods
+    
+    func getCommentsInAllAccounts() -> [Comment]? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getCommentsInAllAccounts' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getComments(data!)
+        }
+        
+        return nil
+    }
+    
+    func getCommentsInAccountBy(id: String) -> [Comment]? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getCommentsInAccountBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getComments(data!)
+        }
+        
+        return nil
+    }
+    
+    func getCommentsInFolderBy(id: String) -> [Comment]? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getCommentsInFolderBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getComments(data!)
+        }
+        
+        return nil
+    }
+    
+    func getCommentsInTaskBy(id: String) -> [Comment]? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getCommentsInTaskBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getComments(data!)
+        }
+        
+        return nil
+    }
+    
+    func getCommentsBy(IDs: [String]) -> [Comment]? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'getCommentsBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.getComments(data!)
+        }
+        
+        return nil
+    }
+    
+    func createCommentInFolderBy(id: String) -> Comment? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'createCommentInFolder' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.createComment(data!)
+        }
+        
+        return nil
+    }
+    
+    func createCommentInCommentBy(id: String) -> Comment? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'createCommentInComment' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.createComment(data!)
+        }
+        
+        return nil
+    }
+    
+    func updateCommentInFolderBy(id: String) -> Comment? {
+        var (data, error) = httpManager.postRequest("", parameters: "", token: token)
+        
+        if error != nil {
+            println("Error in 'updateCommentInFolderBy' - \(error?.localizedDescription)")
+        } else {
+            return apiManager.updateComment(data!)
+        }
+        
+        return nil
+    }
+    
+    func deleteCommentBy(id: String) {
+        
+    }
+    
 }
